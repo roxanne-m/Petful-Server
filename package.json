@@ -1,13 +1,39 @@
 {
   "name": "petful-server",
   "scripts": {
-    "dev": "nodemon server"
+    "dev": "nodemon server",
+    "start": "node server.js",
+    "test": "mocha --require test/setup.js",
+    "dev": "nodemon server.js"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "helmet": "^4.4.1",
     "knex": "^0.20.10",
+    "morgan": "^1.10.0",
     "pg": "^7.18.2"
+  },
+  "description": "",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roxanne-m/Petful-Server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roxanne-m/Petful-Server/issues"
+  },
+  "homepage": "https://github.com/roxanne-m/Petful-Server#readme",
+  "devDependencies": {
+    "chai": "^4.3.0",
+    "mocha": "^8.3.0",
+    "nodemon": "^2.0.7",
+    "supertest": "^6.1.3"
   }
 }
