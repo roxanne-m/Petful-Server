@@ -1,6 +1,7 @@
 const express = require('express')
 const json = require('body-parser').json()
 
+const peopleService = require('../people/people.service');
 const catsService = require('./cats.service');
 
 const catsRouter = express.Router()
@@ -16,6 +17,7 @@ catsRouter
 .delete((req, res) => {
   // Remove a pet from adoption.
   const catAdopted = catsService.dequeueCat();
+  peopleService.dequeuePeople();
   res.status(200).json(catAdopted);
 })
 

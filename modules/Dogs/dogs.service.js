@@ -21,7 +21,7 @@ const dogsService = {
     return dogs.show();
   },
 
-  dequeueDog(type) {
+  dequeueDog() {
     // Remove a pet from the queue.
     const adoptedDog = dogs.dequeue();
     return dogs.all(); // return list of dogs

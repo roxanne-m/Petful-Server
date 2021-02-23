@@ -21,10 +21,5 @@ peopleRouter
   res.status(201).json(addingPerson);
 })
 
-.delete((req, res) => {
-  // Remove a person from the queue
-  peopleService.dequeuePeople();
-  res.status(200).end();
-})
 
 module.exports = peopleRouter;

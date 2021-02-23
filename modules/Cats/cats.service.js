@@ -21,7 +21,7 @@ const catsService = {
     return cats.show();
   },
 
-  dequeueCat(type) {
+  dequeueCat() {
     // Remove a pet from the queue.
     const adoptedCat = cats.dequeue();
     return cats.all();  // return list of cats
