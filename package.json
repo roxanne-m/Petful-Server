@@ -4,7 +4,9 @@
     "dev": "nodemon server",
     "start": "node server.js",
     "test": "mocha --require test/setup.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "predeploy": "npm audit",
+    "deploy": "git push heroku main"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -24,6 +26,9 @@
     "url": "git+https://github.com/roxanne-m/Petful-Server.git"
   },
   "keywords": [],
+  "engines": {
+    "node": "12.19.0"
+  },
   "author": "",
   "license": "ISC",
   "bugs": {
